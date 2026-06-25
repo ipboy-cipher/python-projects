@@ -1,10 +1,24 @@
-print("=== Calculadora Simples ===")
+print("=== Calculadora Pro ===")
 
-a = float(input("Digite o primeiro número: "))
-b = float(input("Digite o segundo número: "))
+a = float(input("Número 1: "))
+b = float(input("Número 2: "))
 
-print("\nResultados:")
-print("Soma:", a + b)
-print("Subtração:", a - b)
-print("Multiplicação:", a * b)
-print("Divisão:", a / b)
+operacao = input("Escolha (+, -, *, /): ")
+
+if operacao == "+":
+    print("Resultado:", a + b)
+
+elif operacao == "-":
+    print("Resultado:", a - b)
+
+elif operacao == "*":
+    print("Resultado:", a * b)
+
+elif operacao == "/":
+    if b != 0:
+        print("Resultado:", a / b)
+    else:
+        print("Erro: divisão por zero")
+
+else:
+    print("Operação inválida")
